@@ -1,7 +1,10 @@
 ---
 title: 从零开始建站(三)--增强VPS的安全性
 date: 2017-02-16 11:51:20
-tags: 技术
+tags: 
+- 技术
+- vps
+- 安全
 ---
 
 当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。
@@ -9,20 +12,28 @@ tags: 技术
 
 ## 第一步：添加新用户，然后设置密码
 
-adduser username
-### 授予root权限
 ```
+adduser apple
 gpasswd -a apple sudo
 ```
-## 第二步：禁止远程root登陆，修改默认端口
+
+## 第二步：禁止远程root登陆，修改默认端口，限制登陆次数
 
 既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在`/etc/ssh/sshd_config`里
 
-### 第三步：使改变生效
-
-### 重启ssh服务
 ```
-service ssh restart
+# 默认登陆端口
+Port 2334
+# 限制登陆次数
+MaxAuthTries 10
+```
+
+当然，还有更有效的工具，[Fail2Ban](https://www.fail2ban.org/)，相关介绍和使用会在接下来的文章中介绍。
+## 第三步：使改变生效
+
+```
+# 重启ssh服务
+sudo service ssh restart
 ```
 重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。
 

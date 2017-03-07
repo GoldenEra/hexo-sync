@@ -5,9 +5,9 @@ tags: 技术
 ---
 ## 关于VPS
 
-&emsp;&emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
+可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
 
-&emsp;&emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，搬瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!
+当你从VPS服务商（DIgitalOcean，Conhon，Lindo，搬瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!
 
 VPS提供商：Digitalocean
 服务器环境：Ubuntu 12.04.5 x64
@@ -17,7 +17,7 @@ VPS提供商：Digitalocean
 
 ## 关于LAMP
 
-&emsp;&emsp;LAMP是一组用来搭建网站或者服务器的开源软件，他们本身都是独立的软件，LAMP则是Linux，Apache，MySQL，PHP的首字母缩写，因为我们使用的Ubuntu正是Linux的一个发行版，所以接下来只需要安装Apache，MySQL和PHP.
+LAMP是一组用来搭建网站或者服务器的开源软件，他们本身都是独立的软件，LAMP则是Linux，Apache，MySQL，PHP的首字母缩写，因为我们使用的Ubuntu正是Linux的一个发行版，所以接下来只需要安装Apache，MySQL和PHP.
 
 ## 第一步：下载命令行客户端
 
